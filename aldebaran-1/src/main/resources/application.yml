@@ -3,6 +3,8 @@ spring:
     name: aldebaran
   banner:
     location: classpath:banner.txt
+  main:
+    allow-circular-references: true
 
   mail:
     host: ${SMTP_HOST}
@@ -24,6 +26,8 @@ spring:
 
   thymeleaf:
     cache: false
+    prefix: classpath:/templates/
+    suffix: .html
 
   datasource:
     url: ${DB_URL}
@@ -33,7 +37,6 @@ spring:
 
   jpa:
     open-in-view: false
-
 server:
   port: 8080
   url: http://localhost:8080/
@@ -75,6 +78,7 @@ client:
   sportsbook:
     walletcode: 071221
     js: https://sb2wsdk-altenar2-stage.biahosted.com/altenarWSDK.js
+    jsinit:
   operator: loterianacional
   gsNewLauncher: blueocean,worldmatch
   gsNewLauncher1: goldenrace
@@ -143,3 +147,13 @@ geolite:
   enabled: true
   country: EC
   username: ${GEOLITE_USERNAME}
+
+entitymanager:
+  packagesToScan: com.aldebaran.model
+
+minigames: 2986
+googleApiUrl: https://www.google.com/recaptcha/api.js?render=6Lcw1XAoAAAAAGjf57FMa0WroxgMMgBK3DwUZbWA
+
+smartico:
+  publicBrandKey: ${SMARTICO_PUBLIC_BRAND_KEY}
+  publicLabelKey: ${SMARTICO_PUBLIC_LABEL_KEY}
