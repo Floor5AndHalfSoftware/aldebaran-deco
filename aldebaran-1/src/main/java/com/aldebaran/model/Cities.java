@@ -1,0 +1,52 @@
+package com.aldebaran.model;
+
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.EntityResult;
+import javax.persistence.FieldResult;
+import javax.persistence.Id;
+import javax.persistence.SqlResultSetMapping;
+
+
+
+
+
+
+
+@Entity
+@SqlResultSetMapping(name = "Cities", entities = {@EntityResult(entityClass = com.aldebaran.model.Cities.class, fields = {@FieldResult(name = "id", column = "id"), @FieldResult(name = "name", column = "name"), @FieldResult(name = "province_id", column = "province_id")})})
+public class Cities
+  implements Serializable
+{
+  private static final long serialVersionUID = 1L;
+  @Id
+  private Integer id;
+  private String name;
+  private Integer province_id;
+  
+  public Integer getId() {
+     return this.id;
+  }
+  
+  public void setId(Integer id) {
+     this.id = id;
+  }
+  
+  public String getName() {
+     return this.name;
+  }
+  
+  public void setName(String name) {
+     this.name = name;
+  }
+  
+  public Integer getProvince_id() {
+     return this.province_id;
+  }
+  
+  public void setProvince_id(Integer province_id) {
+     this.province_id = province_id;
+  }
+}
+
+

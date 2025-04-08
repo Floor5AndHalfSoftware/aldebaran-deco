@@ -1,0 +1,2760 @@
+.scroll-tab-content {
+    max-height: 58vh;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+.scroll-tab-content-no-height {
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+.scroll-list {
+    max-height: 64vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#lottery.scroll-list {
+    max-height: 61vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#info.scroll-list {
+    max-height: 49vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#session.scroll-list {
+    max-height: 52vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#bonuses.scroll-list {
+    max-height: 68vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#movements.scroll-list {
+    max-height: 55vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#bet.scroll-list {
+    max-height: 68vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#deposits.scroll-list {
+    max-height: 74vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+#politics.scroll-list {
+    max-height: 61vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat';
+}
+
+
+.my-align-left {
+    text-align: left !important;
+}
+
+.confirm-page {
+    background: url(../images/do-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.sfondo-2 {
+    background: url(../images/fondo-2.png);
+    background-position: top;
+    background-repeat: repeat;
+    background-size: cover;
+    height: auto;
+    position: relative;
+}
+
+.sfondo-casino {
+    background: #10132a;
+}
+
+.sfondo-casino-safari {
+    background: url(../images/background-casino.jpg);
+    background-repeat: initial;
+    background-attachment: scroll;
+    background-size: 2000px;
+}
+
+.sfondo-3 {
+    background: url(../images/do-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    position: relative;
+}
+
+.sfondo-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    position: relative;
+    background: linear-gradient(rgba(4, 44, 102, 0.7), rgba(242, 242, 242, 0.0)), url(../images/imagen-parallax.png);
+    background: -webkit-linear-gradient(rgba(4, 44, 102, 0.7), rgba(242, 242, 242, 0.0)), url(../images/imagen-parallax.png);
+    background: -o-linear-gradient(rgba(4, 44, 102, 0.7), rgba(242, 242, 242, 0.0)), url(../images/imagen-parallax.png);
+    background: -moz-linear-gradient(rgba(4, 44, 102, 0.7), rgba(242, 242, 242, 0.0)), url(../images/imagen-parallax.png);
+}
+
+.vue-slider-dot {
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.nav-link {
+    color: white;
+    width: max-content;
+}
+
+#userProfile .modal-content {
+    min-height: 90vh;
+}
+
+#sessionDetails .modal-content {
+    min-height: 80vh;
+}
+
+#confirmDepositModal .modal-content {
+    min-height: 30px !important;
+}
+
+.profileUl.nav-pills {
+    display: inline-flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.nav {
+    flex-wrap: nowrap;
+}
+
+.btn-link {
+    color: white !important;
+}
+
+.btn-link-blue {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #02114F;
+    border: 1px solid;
+}
+
+.btn-link-alt {
+    color: #e9f242 !important;
+    background: none;
+    font-weight: bold;
+}
+
+
+a.btn-4.yellow-btn.text-white {
+    border: solid #ffff00 2px;
+    font-family: 'Righteous';
+    font-size: 16px;
+}
+
+a:hover.btn-4.yellow-btn.text-white {
+    background: linear-gradient(to bottom, #ddb300 30%, #FFCD01 70%);
+    border: solid #ffff00 2px;
+    font-family: 'Righteous';
+    font-size: 16px;
+}
+
+.hr {
+    width: 120px;
+    height: 1px;
+    margin-right: auto;
+    background-color: black;
+    margin-top: 0px;
+    margin-bottom: 50px
+}
+
+.hr-white {
+    background-color: white;
+}
+
+.hr-no-margin-left {
+    margin-left: 0px;
+}
+
+.margin-faq {
+    margin-right: 0px;
+    margin-left: 0px
+}
+
+section#banner {
+    height: 70vh;
+}
+
+section#faq {
+    background-attachment: fixed !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: #181434;
+}
+
+@media screen and (max-width:1000px) {
+    #session-detail.scroll-list {
+        max-height: 80vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .margin-faq {
+        margin-right: 0px;
+        margin-left: 0px
+    }
+}
+
+@media all and (max-width: 768px) {
+    #userProfile {
+        min-width: 100%;
+        margin: 0;
+    }
+
+    #userProfile .modal-content {
+        min-height: 100vh;
+    }
+
+    #userProfile .modal-dialog {
+        min-width: 100%;
+        margin: 0;
+    }
+
+    .hr-no-margin-left {
+        margin-left: 0px;
+    }
+
+    section#banner {
+        height: 65vh;
+    }
+
+    .font-footer {
+        font-size: 12px;
+    }
+
+    .scroll-tab-content {
+        max-height: 67vh;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    .scroll-tab-content-no-height {
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    .scroll-list {
+        max-height: 64vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #lottery.scroll-list {
+        max-height: 76vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #info.scroll-list {
+        max-height: 49vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #session.scroll-list {
+        max-height: 53vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #bonuses.scroll-list {
+        max-height: 85vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #movements.scroll-list {
+        max-height: 55vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #bet.scroll-list {
+        max-height: 68vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #deposits.scroll-list {
+        max-height: 74vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+
+    #politics.scroll-list {
+        max-height: 76vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Montserrat';
+    }
+}
+
+.font-footer {
+    font-size: 14px;
+}
+
+.darkColor p {
+    color: #343a40 !important;
+}
+
+.my-is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.form-select {
+    border-radius: 35px;
+    background-color: #181434;
+    color: white;
+    font-size: 14px;
+    height: 50px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.big-checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+input:focus~.floating-label,
+input:focus~.floating-label p,
+input:not(:focus):valid~.floating-label,
+input:not(:focus):valid~.floating-label>p {
+    top: 0px;
+    bottom: 10px;
+    left: 20px;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 14px;
+    transition: 0.2s ease all;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.floating-label-date {
+    position: absolute;
+    pointer-events: none;
+    top: 0px;
+    bottom: 10px;
+    left: 20px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-control {
+    background: #E5E5E5 !important;
+    border-radius: 23.5px !important;
+    font-family: 'Montserrat' !important;
+    font-size: 16px !important;
+    z-index: 0 !important;
+}
+
+.img-club {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+    height: 70px;
+}
+
+.img-club-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 70px;
+}
+
+@media all and (max-width: 768px) {
+    .desktopimage {
+        display: none;
+    }
+
+    .tabletimage {
+        display: none;
+    }
+
+    .mobileimage {
+        display: block;
+    }
+
+    .img-club {
+        padding-left: 7px;
+        padding-right: 7px;
+        width: 50px;
+        height: 37px;
+    }
+
+    .img-club-1 {
+        padding-left: 7px;
+        padding-right: 7px;
+        height: 37px;
+    }
+}
+
+@media all and (min-width: 769px) and (max-width: 1023px) {
+    .desktopimage {
+        display: none;
+    }
+
+    .tabletimage {
+        display: block;
+    }
+
+    .mobileimage {
+        display: block;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .desktopimage {
+        display: block !important;
+    }
+
+    .tabletimage {
+        display: none;
+    }
+
+    .mobileimage {
+        display: none;
+    }
+}
+
+/** PROGRESS BAR PRELOADING **/
+.demo-container {
+    width: 200px;
+    margin: auto;
+    display: inline-block;
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-bar-value {
+    width: 100%;
+    height: 100%;
+    background-color: #ffda00;
+    animation: indeterminateAnimation 1s infinite linear;
+    transform-origin: 0% 50%;
+}
+
+@keyframes indeterminateAnimation {
+    0% {
+        transform: translateX(0) scaleX(0);
+    }
+
+    40% {
+        transform: translateX(0) scaleX(0.4);
+    }
+
+    100% {
+        transform: translateX(100%) scaleX(0.5);
+    }
+}
+
+/** PROGRESS BAR PRELOADING END **/
+
+select {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon-append {
+    left: -24px;
+    position: relative;
+    top: 11px;
+    color: #2f5597;
+}
+
+.active-nav {
+    color: #FFCD01 !important;
+    outline: 0 !important;
+}
+
+.new {
+    z-index: 200;
+    position: absolute;
+}
+
+.close-launch {
+    z-index: 200;
+    width: 30px !important;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.close-launch-1 {
+    z-index: 200;
+    width: 30px !important;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#launcher {
+    left: 10px !important;
+}
+
+#webWidget {
+    left: 10px !important;
+}
+
+.scrollbar-style::-webkit-scrollbar-track,
+.scrollbar-style-vertical::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-style::-webkit-scrollbar,
+.scrollbar-style-vertical::-webkit-scrollbar {
+    width: 12px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-style::-webkit-scrollbar-thumb,
+.scrollbar-style-vertical::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+@media all and (max-width: 768px) {
+    .scrollbar-style::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    .scrollbar-style-vertical::-webkit-scrollbar {
+        width: 2px;
+
+    }
+
+    .padding-date {
+        padding-top: 14px;
+    }
+}
+
+.ico-social {
+    max-width: 64px;
+}
+
+.border-radius-img {
+    border-radius: 30px;
+}
+
+.refresh-icon {
+    float: right;
+    position: relative;
+    margin-right: 5px;
+}
+
+.credit-card-icon {
+    width: 20px;
+    height: 20px;
+    float: right;
+    position: relative;
+    top: -2px;
+    left: -131px;
+}
+
+.col-padding {
+    padding-right: 6px !important;
+    padding-left: 6px !important;
+}
+
+/* new casino page scroll */
+.inline-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+    padding-left: 6px;
+    justify-content: start;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .inline-wrapper {
+        overflow: hidden;
+    }
+}
+
+.prevButton {
+    width: 30px;
+    transform: scaleX(-1);
+    z-index: 801;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.nextButton {
+    width: 30px;
+    z-index: 801;
+    cursor: pointer;
+}
+
+.buttonsGroup {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 86px;
+}
+
+.games-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 29px;
+    color: #FFB11B;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    background-color: #202659;
+    padding: 10px 15px;
+    text-shadow: 0px 0px 8px #FFB11B;
+    border-radius: 5px;
+}
+
+.mas-container {
+    float: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-shadow: none;
+    text-transform: none;
+    position: relative;
+    bottom: 3px;
+}
+
+.icon-menu-sx {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    position: relative;
+    top: -2px;
+}
+
+.mas-text {
+    color: #007BFF;
+}
+
+.nextMas {
+    max-width: 20px;
+    position: relative;
+    left: -172px;
+}
+
+.menuCasino {
+    min-width: 250px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 23px;
+    color: #F1F1F1;
+    text-transform: capitalize;
+}
+
+.menuCasino1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: #F1F1F1;
+    text-transform: capitalize;
+}
+
+.menuCasino a:link,
+.menuCasino a:hover,
+.menuCasino a:visited,
+.menuCasino a:active,
+.menuCasino1 a:link,
+.menuCasino1 a:hover,
+.menuCasino1 a:visited,
+.menuCasino1 a:active {
+    text-decoration: none;
+    color: #F1F1F1;
+}
+
+a.aNoStyle:link,
+a.aNoStyle:visited,
+a.aNoStyle:active {
+    text-decoration: none;
+}
+
+a.aNoStyle:hover {
+    text-decoration: none;
+    color: transparent;
+}
+
+.leftCasinoBar {
+    background: rgba(8, 44, 97, .85);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+    height: 1200px;
+    padding-top: 6px;
+}
+
+.centralCasinoBar {
+    background-color: #2b3276;
+    min-height: 87px;
+}
+
+.centralCasinoBar1 {
+    background-color: #202659;
+}
+
+.menuCasinoTitle {
+    background-color: #336FB7;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.header-btn {
+    width: 137px !important;
+    height: 32px;
+    border: 3px solid #FFFFFF !important;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px !important;
+}
+
+
+.blue-loteria {
+    background: #28AAE1;
+}
+
+.background-transparent {
+    background-color: transparent;
+}
+
+.border-none {
+    border: none;
+}
+
+.header-btn>span,
+.header-btn-no-border>span {
+    font-size: 12px;
+    font-family: 'Montserrat';
+}
+
+.box-list-element {
+    background-color: #DFE0EA;
+    border: solid 1px #BDBFD5;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+
+.box-list-detail-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b8bcdc;
+    width: 25px;
+    border-radius: 3px;
+    height: calc(100% - 10px);
+    margin: 5px 0px 5px 14px;
+}
+
+.box-150 {
+    background-color: #DFE0EA;
+    max-height: 150px;
+    border: solid 1px #BDBFD5;
+}
+
+.img-money-transfers {
+    margin-bottom: 18px;
+    max-width: 265px;
+    max-height: 100px;
+}
+
+.img-vecino-barro {
+    height: 110px;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .box-150 {
+        background-color: #eae9ce;
+        height: 274px;
+    }
+}
+
+@media (max-width: 471px) {
+    .box-150 {
+        background-color: #eae9ce;
+        height: 300px;
+    }
+
+    .img-visa-mastercard {
+        margin-top: 5px;
+    }
+
+    .col-visa {
+        margin-top: -30px;
+    }
+
+    .img-vecino-barro {
+        height: 74px;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 430.99px) {
+    .box-150 {
+        background-color: #eae9ce;
+        height: 300px;
+    }
+
+    .col-visa {
+        margin-top: -30px;
+    }
+
+    .img-visa-mastercard {
+        margin-top: 5px;
+    }
+
+    .img-vecino-barro {
+        height: 74px;
+        margin-top: 0px;
+    }
+}
+
+.title-box {
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.title-text {
+    color: #000;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.box-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.btn-money-transfer-recarga {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: #28AAE1;
+    background: #28AAE1;
+}
+
+.btn-money-transfer-recarga-text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.aldebaran-select {
+    background: transparent;
+    color: white;
+}
+
+.aldebaran-select:focus {
+    background: transparent;
+    color: white;
+}
+
+select.aldebaran-select>option {
+    color: gray;
+}
+
+.aldebaran-input-text {
+    background: transparent;
+    color: white;
+}
+
+.aldebaran-input-text::placeholder {
+    color: white;
+}
+
+.aldebaran-input-text:focus {
+    background: transparent;
+    color: white;
+}
+
+.button-previous-profile {
+    border-radius: 5px;
+    background-color: #2B3276;
+    color: white;
+    border: none;
+    width: 105px;
+    height: 29px;
+}
+
+.logos-footer {
+    padding-top: 15px;
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.grid-games {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-auto-rows: minmax(129px, auto);
+    grid-auto-flow: dense;
+}
+
+@media (min-width: 360px) and (max-width: 479px) {
+    .grid-games {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.col-span-2 {
+    grid-column: span 2 / span 2 !important;
+}
+
+.row-span-2 {
+    grid-row: span 2 / span 2;
+}
+
+/* BET593 HOSTED STATIC PAGES */
+
+.bet593-home,
+.bet593-faq {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F1229;
+    box-sizing: content-box;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .hero-logo {
+    max-width: 100%;
+}
+
+.title-glow {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    background: linear-gradient(86.08deg, #004A99 3.38%, #007BFF 99.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 0px 16px #007BFF;
+}
+
+.title-second {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: -2px;
+    color: #DFE0EA;
+}
+
+.title {
+    font-size: 3.75rem;
+    line-height: 1;
+    color: rgb(228, 228, 231);
+    font-weight: 500;
+    margin: 0 1rem;
+}
+
+.pages-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1rem 7rem;
+}
+
+.pages-section .page-card-container {
+    display: flex;
+    flex: 1 1 0%;
+}
+
+.pages-section .page-card-container a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.pages-section .page-card-container .page-card {
+    display: flex;
+    color: white;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 15rem;
+    border-width: 1px;
+    border-radius: 0.5rem;
+}
+
+.pages-section .page-card-container .page-card .page-title-bold {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.pages-section .page-card-container .page-card .page-title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.pages-section .page-card-container .page-card.sportsbook {
+    border: 1px solid rgb(251, 191, 36);
+    box-shadow: 0 0 10px rgb(255, 177, 27);
+}
+
+.pages-section .page-card-container .page-card.virtual {
+    border: 1px solid rgb(49, 130, 206);
+    box-shadow: 0 0 10px rgb(0, 123, 255);
+}
+
+.pages-section .page-card-container .page-card.casino {
+    border: 1px solid rgb(49, 130, 206);
+    box-shadow: 0 0 10px rgb(0, 123, 255);
+}
+
+.events {
+    margin: 1rem 0;
+    padding: 0 4rem;
+}
+
+.events .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.events .title .title-glow {
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+.events .events-container {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0.5rem;
+}
+
+.events .events-container .event-card {
+    flex: 1 1 0%;
+    background-size: cover;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.events .events-container .event-card .event-status {
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-right: 5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.events .events-container .event-card .event-status.live {
+    background-color: rgb(153, 27, 27);
+}
+
+.events .events-container .event-card .event-date {
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-cup {
+    color: rgb(250, 204, 21);
+    font-weight: 700;
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-teams-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-teams-container .event-team-1 {
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-teams-container .event-vs {
+    font-weight: 700;
+    color: rgb(250, 204, 21);
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-teams-container .event-team-2 {
+    margin: 0.25rem;
+}
+
+.events .events-container .event-card .event-button-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0.25rem;
+    gap: 0.5rem;
+}
+
+.events .events-container .event-card .event-button-container a {
+    text-decoration: none;
+}
+
+.events .events-container .event-card .event-button-container .event-button {
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(96, 165, 250);
+    height: 2sm;
+    min-height: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1em;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.events .events-container .event-card .event-button-container .event-button .event-button-text {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    display: inline;
+    text-decoration: none;
+}
+
+.events .events-container .event-card .event-button-container .event-button .event-button-value {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    display: inline;
+    text-decoration: none;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #18141D;
+}
+
+.games .games-header {
+    display: flex;
+    justify-content: center;
+}
+
+.games .games-header .games-image-container {
+    width: 33.333%;
+}
+
+.games .games-header .games-image-container .games-image {
+    width: 100%;
+}
+
+.games .games-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0.25rem;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.games .games-container .game-card {
+    width: 13rem;
+    border-radius: 0.5rem;
+    height: 10rem;
+    margin: 1.25rem;
+    border: 1px solid white;
+    box-shadow: 0 0 24px rgba(0, 123, 255, 0.8);
+    overflow: hidden;
+}
+
+.game-card .port_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.section-title {
+    background-color: rgb(23, 37, 84);
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 3rem;
+}
+
+.section-title .section-icon {
+    margin: 0 0.5rem;
+    color: rgb(251, 191, 36);
+    font-size: 2.25rem;
+    filter: drop-shadow(0 0 5px rgb(255, 177, 27));
+    line-height: 3rem;
+}
+
+.section-title .section-text {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: rgb(251, 191, 36);
+    filter: drop-shadow(0 0 5px rgb(255, 177, 27));
+}
+
+.question-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 3rem;
+}
+
+.question-container .question-card {
+    width: 33.333%;
+    display: inline-block;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.question-container .question-card.full-width {
+    width: 100%;
+}
+
+.question-container .question-card .question-icon {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(251, 191, 36);
+    background-color: rgb(49, 46, 129);
+    color: rgb(251, 191, 36);
+    filter: drop-shadow(0 0 5px rgb(255, 177, 27));
+}
+
+.question-container .question-card .question-title {
+    color: rgb(226, 232, 240);
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.question-container .question-card .question-text {
+    color: rgb(226, 232, 240);
+}
+
+@media (max-width: 1120px) {
+    .events {
+        margin: 1rem 0;
+        padding: 0 4rem;
+    }
+
+    .events .events-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0.5rem;
+    }
+
+    .events .events-container .event-card {
+        flex: 45%;
+        box-sizing: border-box;
+    }
+
+    .question-container .question-card {
+        width: 50%;
+    }
+
+    .question-container .question-card.full-width {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 1rem;
+        padding-top: 18rem;
+        padding-bottom: 3rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .title-glow {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 0 1rem;
+    }
+
+    .title-second {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 0 1rem;
+    }
+
+
+    .title {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 0 1rem;
+    }
+
+    .pages-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .pages-section .page-card-containe .page-card {
+        margin: 0.5rem;
+        width: 100%;
+        height: 15rem;
+    }
+
+    .pages-section .page-card-containe .page-card .page-title-bold {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .pages-section .page-card-containe .page-card .page-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .events {
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    .events .title {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .events .title .title-glow {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .events .events-container {
+        flex-direction: column;
+        margin: 2rem 0.5rem;
+    }
+
+    .events .events-container .event-card {
+        background-size: cover;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+    }
+
+    .events .events-container .event-card .event-status {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding-right: 5rem;
+        padding: 0.5rem;
+        display: inline-block;
+    }
+
+    .events .events-container .event-card .event-date {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-cup {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-teams-container {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-teams-container .event-team-1 {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-teams-container .event-vs {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-teams-container .event-team-2 {
+        margin: 0.25rem;
+    }
+
+    .events .events-container .event-card .event-button-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0.25rem;
+        gap: 0.5rem;
+    }
+
+    .events .events-container .event-card .event-button-container a {
+        text-decoration: none;
+    }
+
+    .events .events-container .event-card .event-button-container .event-button {
+        border: 1px solid white;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(96, 165, 250);
+        height: 2sm;
+        min-height: 2rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        line-height: 1em;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .events .events-container .event-card .event-button-container .event-button .event-button-text {
+        color: white;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        display: inline;
+        text-decoration: none;
+    }
+
+    .events .events-container .event-card .event-button-container .event-button .event-button-value {
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1rem;
+        display: inline;
+        text-decoration: none;
+    }
+
+    .games {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .games .games-header .games-image-container {
+        width: 75%;
+    }
+
+    .games .games-header .games-image-container .games-image {
+        width: 100%;
+    }
+
+    .games .games-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0.25rem;
+        width: 100%;
+    }
+
+    .games .games-container .game-card {
+        width: 13rem;
+        border-radius: 0.5rem;
+        height: 10rem;
+        margin: 1.25rem;
+        border: 1px solid white;
+        box-shadow: 0 0 24px rgba(0, 123, 255, 0.8);
+    }
+
+    .question-container .question-card {
+        width: 100%;
+    }
+
+    .question-container .question-card.full-width {
+        width: 100%;
+    }
+}
+
+/* MODAL CUSTOM STYLE */
+.modal-custom-text {
+    font-size: 16px;
+    color: #EAEBF1 !important;
+}
+
+.modal-custom-content {
+    max-width: 600px;
+    height: auto;
+    border-radius: 24px;
+    border: 1px solid #007BFF;
+    box-shadow: 0px 0px 16px #007BFF;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #131635;
+}
+
+#userProfile .modal-custom-content {
+    max-width: 1000px;
+}
+
+.modal-custom-body .nav-link.active .fa,
+.modal-custom-body .nav-link.active span {
+    color: #fff;
+}
+
+.modal-body .nav-link.active .fa,
+.modal-body .nav-link.active span {
+    color: #fff;
+}
+
+.modal-custom-body {
+    padding: 10px;
+}
+
+.modal-custom-body span,
+.modal-custom-body input,
+.modal-custom-body select,
+.modal-custom-body h6,
+.modal-custom-body label,
+.modal-custom-body .col-loteria {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #0C194F;
+}
+
+.modal-custom-body h3 {
+    font-family: 'Montserrat Bold';
+    font-size: 18px;
+    color: #0C194F;
+}
+
+.modal-custom-body p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #0C194F;
+}
+
+.modal-custom-body .btn-money-transfer-recarga {
+    margin-bottom: 10px;
+}
+
+#userProfile .casino-btn a {
+    background: #2CA9E0;
+}
+
+#userProfile .casino-btn a:hover {
+    background: #2CA9E0;
+}
+
+[class^="col-"].justify-content-center,
+[class^="col-"].align-items-center {
+    display: flex;
+}
+
+.modal-custom-body .fa {
+    color: #0C194F;
+}
+
+#userProfile .card {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-custom-header {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 140px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border: 1px solid #007BFF;
+    box-shadow: 0px 0px 16px #007BFF;
+    background-color: #2B3276;
+}
+
+#userProfile .modal-custom-header {
+    height: 100px !important;
+}
+
+.modal-custom-header span {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #fff !important;
+}
+
+/*
+.modal-header button {
+    color: #fff;
+}*/
+
+.modal-custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.modal-custom-container span {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #CDCDCD;
+    cursor: pointer;
+}
+
+.modal-custom-span-active {
+    border-bottom: 2px solid transparent;
+    border-bottom-color: #2CA9E0;
+    color: #2CA9E0 !important;
+}
+
+.modal-custom-title {
+    font-family: 'Montserrat Bold' !important;
+    font-size: 32px !important;
+    margin: 30px auto 10px !important;
+    background: linear-gradient(86.08deg, #131635 9.38%, #007BFF 99.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.2px #EAEBF1;
+    text-shadow: 0px 0px 20px #007BFF;
+    background-clip: text;
+}
+
+.modal-custom-input {
+    border-radius: 5px !important;
+    color: #2B3276;
+    background-color: #BDBFD5 !important;
+    min-height: 40px;
+}
+
+.modal-custom-input::placeholder {
+    color: #2b3276cc !important;
+}
+
+.modal-footer-button {
+    display: flex;
+    padding: 8px 8px 8px 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px !important;
+    border: 1px solid #FFB11B;
+    box-shadow: 0px 0px 16px #FFB11B;
+    background: linear-gradient(86.08deg, #F8C203 3.38%, #FFE57B 99.6%);
+    margin-top: 5px !important;
+    width: 250px !important;
+    height: 48px !important;
+    color: #2B3276;
+    cursor: pointer;
+}
+
+.modal-footer-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.modal-footer-button span,
+.modal-footer-button a {
+    font-family: 'Montserrat SemiBold';
+    color: #2B3276;
+}
+
+.modal-custom-footer {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    width: 60% !important;
+    margin: 0 auto !important;
+    border-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+
+.modal-header button:hover,
+.modal-header button:focus {
+    text-decoration: none;
+    outline: 0;
+    opacity: .75
+}
+
+.modal-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modal-custom-floating-label {
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #EAEBF1;
+    font-family: 'Montserrat Bold';
+}
+
+.input-group .newsletter {
+    top: 5px !important;
+    right: 5px !important;
+    height: 40px !important;
+}
+
+.project-img .nav-menu {
+    font-family: 'Montserrat Bold' !important;
+    font-size: 14px !important;
+}
+
+.modal-custom-input-group-text {
+    background-color: transparent;
+    width: 40px;
+    border: 0 !important;
+}
+
+/* REMOVE STYLE */
+.remove-style {
+    all: initial !important;
+}
+
+.profile-left-menu {
+    background-color: #DFE0EA;
+    border-radius: 16px;
+    height: 99%;
+}
+
+/* PROFILE CHANGES */
+
+.profile-modal {
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #BDBFD5 !important;
+}
+
+.profile-nav-menu {
+    align-items: center !important;
+    margin-top: 50px;
+}
+
+.profile-left-menu-logo {
+    height: 47px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-primary {
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+.profile-nav-link {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    width: 80%;
+}
+
+.profile-label {
+    font-family: 'Montserrat ExtraBold Italic' !important;
+    font-size: 14px !important;
+    color: #1A1E47 !important;
+    margin-left: 5px;
+}
+
+.profile-nav-link span {
+    font-family: 'Montserrat SemiBold' !important;
+    font-size: 13px !important;
+    color: #007BFF;
+}
+
+.withdraws-nav-link span {
+    font-family: 'Montserrat' !important;
+    font-size: 13px !important;
+    color: #007BFF;
+}
+
+.withdraws-nav-link i {
+    color: #007BFF;
+}
+
+.profile-input {
+    background-color: #FFF !important;
+    border-radius: 10px !important;
+    padding-left: 75px !important;
+    height: 36px !important;
+}
+
+
+
+.profile-input-icon {
+    position: absolute;
+    margin-left: 25px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    color: #202659;
+    width: 20px;
+}
+
+.profile-avatar {
+    margin-top: -25px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+.profile-text-label {
+    font-family: 'Montserrat' !important;
+    font-size: 12px !important;
+    color: #5e5e5e !important;
+}
+
+.profile-label-normal {
+    font-family: 'Montserrat ExtraBold Italic' !important;
+    font-size: 11px !important;
+    color: #1A1E47 !important;
+    margin-left: 5px;
+    margin-top: -10px;
+}
+
+.profile-card-small {
+
+    border-radius: 16px;
+    border: 2px solid #BDBFD5;
+    padding: 20px;
+    width: 105px;
+    height: 75px;
+    background-color: #DFE0EA;
+    display: inline-block;
+}
+
+.profile-card-text {
+    font-family: 'Montserrat ExtraBold Italic' !important;
+    font-size: 11px !important;
+    color: #004A99 !important;
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    left: -14px;
+}
+
+.profile-card-text-large {
+    font-size: 14px !important;
+}
+
+.profile-card-large {
+
+    border-radius: 16px;
+    border: 2px solid #BDBFD5;
+    padding: 20px;
+    width: 220px;
+    height: 75px;
+    background-color: #DFE0EA;
+    display: inline-block;
+}
+
+.profile-card-large-blue {
+    padding: 20px;
+    width: 220px;
+    height: 75px;
+    display: inline-block;
+    background: linear-gradient(86.08deg,
+            #004a99 3.38%,
+            #007bff 99.6%);
+    border: 2px solid #007bff;
+    box-shadow: 0px 0px 16px #007bff;
+    border-radius: 16px;
+}
+
+.profile-card-large-text {
+    font-family: 'Montserrat ExtraBold Italic';
+    font-size: 12px;
+    color: #004A99;
+}
+
+.fa-document:before {
+    content: '';
+    background: url(images/profile_documento_icon.png);
+    background-size: cover;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.profile-card-img {
+    margin-top: -35px;
+    margin-left: -15px;
+    width: 20px
+}
+
+.profile-button {
+    background-color: #2B3276;
+    font-family: 'Montserrat' !important;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer;
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.profile-input-label {
+    color: #1a1e47;
+    font-family: 'Montserrat ExtraBold Italic';
+    font-size: 12px;
+}
+
+.money-transfers-button {
+    background-color: #2B3276;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 9px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.money-transfers-button:disabled {
+    background-color: gray;
+}
+
+
+#v-pills-tabContent input,
+#v-pills-tabContent select {
+    font-size: 13px !important;
+    max-height: 32.1px;
+}
+
+.background-transparent .alert.alert-info {
+    background-color: transparent;
+    border: 0;
+}
+
+.alert-custom-text .alert.alert-info {
+    color: #004a99;
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
+.custom-wallet-nav {
+    background-color: #003773;
+    margin: 0 auto;
+    width: 95%;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+.custom-wallet-nav.nav-pills i,
+.custom-wallet-nav.nav-pills span {
+    color: white
+}
+
+.custom-wallet-nav.nav-pills .nav-link.active,
+.custom-wallet-nav.nav-pills .nav-link.active i,
+.custom-wallet-nav.nav-pills .nav-link.active span {
+    color: #FFD700 !important;
+    background-color: transparent;
+}
+
+.no-style-a {
+    color: #000;
+    text-decoration: none;
+}
+
+.no-style-a:active,
+.no-style-a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.button-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lottery-element {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #DFE0EA;
+    border: solid 1px #b6bdd9;
+    border-radius: 8px !important;
+}
+
+.lottery-element:hover {
+    background-color: #fff;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle button {
+    height: 27px;
+    width: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.circle button span {
+    font-size: 22px;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.top--3 {
+    top: -3px;
+}
+
+.modal-footer-button.reverse {
+    background: #131635;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 0px 24px rgba(0, 123, 255, 0.9);
+}
+
+.modal-footer-button.reverse span,
+.modal-footer-button.reverse i {
+    color: #EAEBF1;
+}
+
+.modal-footer-button.reverse i:hover {
+    color: #FFB11B;
+}
+
+
+.box-400 {
+    background-color: #DFE0EA;
+    max-height: 450px;
+    border: solid 1px #BDBFD5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button.close {
+    position: relative;
+    z-index: 1;
+
+
+}
+
+
+.section-footer {
+    padding-top: 85px !important;
+    background-color: #131635;
+}
+
+
+.footer-li {
+    padding-bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Montserrat';
+    color: #BDBFD5;
+}
+
+
+.footer-li a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: #B6BDD9;
+}
+
+.header-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    max-width: 100% !important;
+}
+
+.primary-color {
+    background-color: #202659;
+}
+
+.newsletter-section-footer {
+    padding-top: 0;
+    background-color: #fff;
+    height: 125px;
+}
+
+.logo-section-footer {
+    padding-top: 0;
+    background-color: #fff;
+}
+
+.link-section-footer {
+    padding-top: 0 !important;
+    background-color: #202659;
+}
+
+.tyc-section-footer {
+    padding-top: 0 !important;
+    background-color: #1A1E47;
+}
+
+.footer-li a:hover {
+    color: #FFED00;
+}
+
+nav#nav-part {
+    position: relative;
+}
+
+div#navbar-collapse {
+    height: 70px;
+}
+
+.nav-res div {
+    border: 1px solid #FFF;
+    height: 48px;
+    text-align: center;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+a.header-a {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #0F1F63;
+    font-family: 'Montserrat' !important;
+}
+
+a.header-a:hover {
+    color: #0F1F63;
+}
+
+.header-button {
+
+    /* Login_Action */
+
+    box-sizing: border-box;
+
+
+
+    width: 150px;
+    height: 35px;
+
+    /* Bet/Primario/Azul/1000 */
+    background: #131635;
+    /* Bet/Primario/Gris/50
+
+    Superficies, fondos
+    */
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 0px 16px rgba(0, 123, 255, 0.9);
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    font-family: 'Montserrat';
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EFEFEF;
+    cursor: pointer;
+
+
+}
+
+.blue-loteria {
+    background: #131635;
+}
+
+.register-button {
+
+
+    box-sizing: border-box;
+
+
+
+    width: 135px;
+    height: 35px;
+
+    /* Bet/Efecto/DegNaranja */
+    background: linear-gradient(86.08deg, #F8C203 3.38%, #FFE57B 99.6%);
+    /* Bet/Alertas/Advertencia/200 */
+    border: 1px solid #FFB11B;
+    box-shadow: 0px 0px 16px #FFB11B;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    font-family: 'Montserrat';
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2B3276;
+    cursor: pointer;
+}
+
+#logged-buttons div>button,
+#logged-buttons button {
+    width: 140px;
+    height: 35px;
+}
+
+.modal-body p {
+    font-family: 'Montserrat' !important;
+}
+
+.modal-body .alert {
+    margin: 0 auto;
+    width: 83%;
+}
+
+.modal-custom-content .modal-header h5,
+.modal-custom-content .modal-header span {
+    color: #fff;
+    font-family: 'Montserrat SemiBold';
+    font-size: 18px
+}
+
+#userProfile .card-body.back-light span,
+#userProfile .card-body.back-light p {
+    color: #fff;
+    font-size: 13px;
+}
+
+.loteria-text-white {
+    color: #fff;
+}
+
+
+#userProfile input,
+#userProfile select.modal-custom-input {
+    background-color: #fff !important;
+}
+
+#politics p {
+    font-size: 13px;
+    color: #004A99 !important;
+}
+
+#userProfile .card-body {
+    border-radius: 8px;
+}
+
+.alert.alert-danger span {
+    color: #731d25 !important;
+}
+
+#userProfile .profile-modal .modal-custom-content {
+    min-height: 85vh;
+}
+
+.header-menu-line {
+    width: 100%;
+    height: 0px;
+    display: block;
+    /* Bet/Primario/Azul/500 */
+    border: 1px solid #2B3276;
+
+}
+
+.mobile-register-button {
+    box-sizing: border-box;
+    width: 150px;
+    height: 35px;
+
+    /* Bet/Efecto/DegNaranja */
+    background: linear-gradient(86.08deg, #F8C203 3.38%, #FFE57B 99.6%);
+    /* Bet/Alertas/Advertencia/200 */
+    border: 1px solid #FFB11B;
+    box-shadow: 0px 0px 16px #FFB11B;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    font-family: 'Montserrat';
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2B3276;
+    cursor: pointer;
+}
+
+#menuMobile div>li>button {
+    display: block;
+    font-weight: 600;
+    font-family: "Montserrat";
+    padding: 7px 1px;
+    color: #fff;
+    transition: all 0.3s linear;
+    position: relative;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#menuMobile div>li>a {
+    display: block;
+    font-weight: 600;
+    padding: 7px 1px;
+    position: relative;
+    font-size: 12px;
+}
+
+.header-fixed {
+    position: fixed;
+    z-index: 1000;
+    height: 80px;
+    width: 100%;
+}
+
+.mobile-content-position {
+    position: relative;
+    top: 80px;
+}
+
+#container-menu-mobile {
+    width: 250px;
+}
+
+#container-menu-mobile li {
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 1px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#container-menu-mobile li a {
+    color: #fff;
+}
+
+#ul-blog-mobile,
+#ul-pronosticos-mobile {
+    /* Bet/Secundario/Azul/300 */
+    background: #B0D6FF !important;
+    /* Bet/Secundario/Azul/500 */
+    border: 1px solid #007BFF;
+    box-shadow: 0px 0px 16px #007BFF;
+    border-radius: 8px;
+}
+
+.menu-mobile-sub-menu {
+    color: #202659 !important;
+    font-family: 'Montserrat SemiBold';
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.submenu-icon[data-toggle].collapsed:after {
+    content: " ▾";
+}
+
+.submenu-icon[data-toggle]:not(.collapsed):after {
+    content: " ▴";
+}
+
+.basket-ball {
+    position: relative;
+    padding-left: 60px;
+    /* Adjust space for icon */
+    text-decoration: none;
+    color: inherit;
+}
+
+.basket-ball::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    /* Adjust icon size */
+    height: 20px;
+    /* Adjust icon size */
+    /* Base64 encoded SVG */
+    background-image: url(../images/basketball.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mouse {
+    position: relative;
+    padding-left: 60px;
+    /* Adjust space for icon */
+    text-decoration: none;
+    color: inherit;
+}
+
+.mouse::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    /* Adjust icon size */
+    height: 20px;
+    /* Adjust icon size */
+    /* Base64 encoded SVG */
+    background-image: url(../images/mouse.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.floating-span {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #fff !important;
+    font-family: 'Montserrat Bold' !important;
+}
+
+#mobile-menu-welcome {
+    margin-top: 10px;
+}
+
+#mobile-menu-welcome b {
+    color: #B0D6FF;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+#mobile-menu-welcome p {
+    color: #B0D6FF;
+    font-family: 'Montserrat';
+    font-size: 24px;
+}
+
+#mobile-menu-balance {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+.bet593-faq textarea {
+    height: 160px;
+}
+
+.modal-body .input-group-text {
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-menu-custom {
+    background-color: #181434;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 0px 16px rgba(0, 123, 255, 0.9);
+    border-radius: 8px;
+}
+
+.col-loteria {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.ruleta {
+    width: 130px !important;
+    height: 70px !important;
+    background-image: url('../images/BETNEFICIOS-ICON.gif');
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ruleta-mobile {
+    width: 37px !important;
+    height: 37px !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-size: auto;
+    background-image: url('../images/gift-icon.png');
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+.custom-inner-double-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.custom-inner-double-text .big {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.big {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.custom-inner-double-text .small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.yellow-loteria {
+    background-color: #FFd800;
+}
+
+.yellow-loteria span {
+    color: #131635;
+}
+
+.no-border {
+    border: none;
+}
+
+.yellow-border {
+    border: 2px solid #f3c303;
+}
+
+.yellow-text {
+    color: #fed800;
+}
+
+.balance-modal {
+    display: none;
+    position: fixed;
+    top: 105px;
+    right: 10px;
+    min-width: 100px;
+    background-color: #2c37ab;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: left;
+    z-index: 240;
+    flex-direction: column;
+}
+
+.balance-modal>div>span>strong {
+    font-size: large;
+    font-weight: bold;
+}
+
+.balance-modal p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 5px 0;
+    min-width: 100px;
+}
+
+.balance-modal p strong {
+    margin-left: 5em;
+}
+
+.balance-modal .close-btn {
+    width: 20px !important;
+    height: 20px !important;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid white;
+    background: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.no-outline {
+    outline: none !important;
+}
+
+.mobileimage .header-button {
+    width: 150px;
+}

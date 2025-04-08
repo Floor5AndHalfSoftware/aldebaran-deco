@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Pronósticos deportivos | Juegos Online | bet593.ec</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Pronósticos deportivos | Juegos Online | bet593.ec">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<!---Font Icon-->
+	<link href="font/flaticon.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Plugin CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.png" />
+	<!-- / -->
+	<!-- Theme Style -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/aldebaran.css" rel="stylesheet">
+	<!-- / -->
+
+	<style>
+		input::-ms-reveal,
+		input::-ms-clear {
+			display: none;
+		}
+
+		[v-cloak] {
+			display: none;
+		}
+
+		.altenar-card {
+			background: rgba(255, 255, 255, 0);
+			box-shadow: rgba(13, 13, 13, 0) 0px 0px 0px 0px inset;
+			border-width: 0px;
+			border-color: rgba(255, 255, 255, 0);
+			border-style: solid;
+			border-radius: 20px;
+		}
+
+		.altenar-card-title {
+			display: grid;
+			grid-template-columns: 1fr max-content;
+			-webkit-box-align: center;
+			align-items: center;
+			color: rgb(255, 255, 255);
+			background: rgb(15, 15, 141);
+			text-transform: uppercase;
+			text-shadow: rgba(13, 13, 13, 0) 0px 0px 0px;
+			padding: 6px 16px;
+			font-family: 'Montserrat Bold';
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 20px;
+			border: none;
+			border-radius: 20px 20px 0px 0px;
+		}
+
+		.altenar-card-body {
+			border: none;
+			border-radius: 0px 0px 20px 20px;
+			background: rgb(0, 0, 0);
+		}
+	</style>
+
+</head>
+
+<body style="background-color: #0f1229;">
+
+	<input type="hidden" id="openGame" th:value="*{openGame}" maxlength="150" />
+	<input type="hidden" id="heightGame" th:value="*{heightGame}" maxlength="150" />
+	<input type="hidden" id="language" th:value="*{language}" maxlength="150" />
+	<input type="hidden" id="position" th:value="*{position}" maxlength="150" />
+	<input type="hidden" id="usertoken" th:value="*{usertoken}" maxlength="150" />
+	<input type="hidden" id="sessiontoken" th:value="*{sessiontoken}" maxlength="150" />
+	<input type="hidden" id="serverUrl" th:value="*{serverUrl}" maxlength="150" />
+	<input type="hidden" id="currency" th:value="*{currency}" maxlength="5" />
+	<input type="hidden" id="gameid" th:value="*{gameid}" maxlength="5" />
+	<input type="hidden" id="mtpuUrlLaunch" th:value="*{mtpuUrlLaunch}" />
+	<input type="hidden" id="operator" th:value="*{operator}" />
+
+	<div id="app" v-cloak>
+		<!-- USER LOGGED -->
+		<iframe id="iframeRef" v-if="usertoken && sessiontoken && position == 'bottomRight' && gameid"
+			:src="launcherUrl" :style="'width: 100%; height: '+heightGame+'px;'" framespacing="0" border="0"
+			frameborder="0" scrolling="no" class="border-radius-img"
+			@mouseout="window.parent.postMessage('balance', '*')"></iframe>
+		<!-- / -->
+		<!-- USER NOT LOGGED -->
+		<a v-if="(!usertoken || !sessiontoken) && position == 'bottomRight'"
+			@click="window.parent.postMessage('openlogin', '*');" href="javascript:void(0);">
+			<img src="images/login_to_play.jpg" style="width: 100%;" class="border-radius-img">
+			</img>
+		</a>
+		<!-- / -->
+		<!-- BANNERS CAROUSEL -->
+		<div id="carouselBanner" class="carousel slide" data-ride="carousel" style="margin-top: 20px;"
+			v-if="position == 'bottomRight' || position == 'bottomLeft'">
+			<div class="carousel-inner">
+				<div v-for="(record, i) in imgList" :class="'carousel-item' + (i == 0 ? ' active' : '')">
+					<img v-if="record.mime_type" :src="'data:' + record.mime_type + ';base64,' + record.content"
+						class="border-radius-img" />
+				</div>
+			</div>
+			<a class="carousel-control-prev" :href="'#carouselBanner' + name" role="button" data-slide="prev"
+				v-show="contents && contents.length > 1">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">
+					<a-lang value="previous"> </a-lang>
+				</span>
+			</a>
+			<a class="carousel-control-next" :href="'#carouselBanner' + name" role="button" data-slide="next"
+				v-show="contents && contents.length > 1">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">
+					<a-lang value="next"> </a-lang>
+				</span>
+			</a>
+		</div>
+		<!-- / -->
+
+		<!-- GAMES CAROUSEL -->
+		<div class="altenar-card" v-if="position == 'midCenter'">
+			<!--<div class="altenar-card-title">JUEGOS ONLINE NUEVOS</div>-->
+			<div class="altenar-card-body">
+				<div v-if="gamesNew.length > 0" style="position: relative;top: -26px;">
+					<div class="buttonsGroup">
+						<img id="slideBackcontainerNew" @click="backScroll('containerNew')" src="images/image_next.png"
+							class="prevButton" alt="prev" />
+						<img id="slidecontainerNew" @click="nextScroll('containerNew')" src="images/image_next.png"
+							class="nextButton" alt="next" />
+					</div>
+					<div class="inline-wrapper mx-0" id="containerNew">
+						<template v-for="item in gamesNewSlice" :key="item.gameID">
+							<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 col-padding">
+								<div class="port_img_1" style="margin-bottom: 0px;">
+									<img src="images/new.png" class="new" alt="" v-show="item.new" />
+									<img src="images/loading_slot.gif" class="img-fluid" alt="" :style="style"
+										v-show="imageLoading" />
+									<img :src="item.thumbnailPath" class="img-fluid" alt="" :style="style"
+										@error="replaceImgByDefault" @load="onImageLoad()" v-show="!imageLoading" />
+									<div class="overlay1">
+										<div class="overlay-text">
+											<div class="port-text">
+												<div class="run-txt">
+													<h4>{{ item.name }}</h4>
+													<table style="width: 164px">
+														<tr>
+															<td style="width: 80px">
+																<div class="casino-btn">
+																	<a href="javascript:void(0)"
+																		v-if="!(usertoken && sessiontoken)"
+																		@click="window.parent.postMessage('openlogin', '*');"
+																		class="btn-4 yellow-btn">
+																		Jugar
+																	</a>
+																	<a :href="'/#/games/play/'+item.gameID"
+																		target="_PARENT"
+																		v-if="usertoken && sessiontoken"
+																		class="btn-4 yellow-btn">
+																		Jugar
+																	</a>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+
+
+	<!-- / -->
+	</div>
+
+	<!-- JQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<!-- Plugins -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Vue lib -->
+	<script src="js/vue.min.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/mixins.js"></script>
+	<script>
+
+		Vue.config.devtools = true;
+		Vue.prototype.$http = axios.create({
+			timeout: 45000,
+			headers: { "Content-Type": "application/json" }
+		});
+
+		Vue.prototype.$http.interceptors.response.use((response) => {
+			console.log("[" + response.config.method.toUpperCase() + "] " + response.config.url, response.data);
+			return response;
+		});
+
+		const vue = new Vue({
+			el: "#app",
+			data: {
+				isLogin: 'login',
+				modalLoginKey: 0,
+				contents: [],
+				imgList: [],
+				openGame: null,
+				heightGame: null,
+				language: null,
+				usertoken: null,
+				sessiontoken: null,
+				currency: null,
+				gameid: null,
+				launcherUrl: null,
+				mtpuUrlLaunch: null,
+				operator: null,
+				position: null,
+				sessionIdToClose: null,
+				playGame: false,
+				serverUrl: null,
+
+				imageLoading: true,
+				style: "aspect-ratio: 248/195",
+				gamesNew: [],
+			},
+			computed: {
+				gamesNewSlice() {
+					return this.gamesNew.slice(0, 20);
+				},
+			},
+			created() {
+				if (this.portImg == "port_img_1")
+					this.style = "height: 155px; width: 223px;";
+				else if (this.portImg == "port_img_1 auto_width")
+					this.style = "aspect-ratio: 1.20;";
+			},
+			mounted() {
+				this.openGame = document.getElementById("openGame").value;
+				this.heightGame = document.getElementById("heightGame").value;
+				this.language = document.getElementById("language").value;
+				this.usertoken = document.getElementById("usertoken").value;
+				this.sessiontoken = document.getElementById("sessiontoken").value;
+				this.currency = document.getElementById("currency").value;
+				this.gameid = document.getElementById("gameid").value;
+				this.mtpuUrlLaunch = document.getElementById("mtpuUrlLaunch").value;
+				this.operator = document.getElementById("operator").value;
+				this.position = document.getElementById("position").value;
+				this.serverUrl = document.getElementById("serverUrl").value;
+
+				this.initSlideshow();
+				if (this.position == "bottomRight")
+					this.getBannerSide("banner sportsbook right side");
+				else if (this.position == "bottomLeft")
+					this.getBannerSide("banner sportsbook left side");
+				else if (this.position == "midCenter")
+					this.getGames();
+
+				if (this.usertoken && this.sessiontoken && this.gameid) { // se ho appena fatto il login dal banner del minigame
+					this.getSessions();
+				}
+			},
+			methods: {
+				getBannerSide(category) {
+					let formData = new FormData();
+					formData.append("language", this.language);
+					formData.append("category", category);
+					this.$http
+						.post("cms/file/list", formData)
+						.then((response) => {
+							let result = response.data;
+							if (result.result == 0) {
+								this.contents = result.contents;
+								for (i in this.contents) {
+									formData = new FormData();
+									formData.append("id", this.contents[i].id);
+									this.$http.post("cms/file/content", formData)
+										.then((response1) => {
+											let result1 = response1.data;
+											if (result1.result == 0) {
+												this.imgList.push(result1.record);
+											}
+										});
+								}
+							}
+						})
+						.catch((response) => { console.log(response) });
+				},
+				initSlideshow() {
+					$(".carousel").carousel({
+						interval: 6000,
+						pause: "false",
+					});
+
+					$(".carousel .carousel-inner").swipe({
+						swipeLeft(event, direction, distance, duration, fingerCount) {
+							this.parent().carousel("next");
+						},
+						swipeRight() {
+							this.parent().carousel("prev");
+						},
+						threshold: 0,
+						tap(event, target) {
+							// get the location: in my case the target is my link
+							window.location = $(this)
+								.find(".carousel-item.active a")
+								.attr("href");
+						},
+						excludedElements: "label, button, input, select, textarea, .noSwipe",
+					});
+
+					$(".carousel .carousel-inner").on("dragstart", "a", function () {
+						return false;
+					});
+				},
+				getSessions() {
+					this.playGame = true;
+					let formData = new FormData();
+					formData.append("usertoken", this.usertoken);
+					formData.append("sessiontoken", this.sessiontoken);
+					formData.append("from", "");
+					formData.append("to", "");
+					formData.append("gameid", this.gameid);
+					formData.append("state", "OPEN");
+					this.$http
+						.post("session/list", formData)
+						.then((response) => {
+							let result = response.data;
+							if (result.result == 0) {
+								let sessions = result.sessions;
+								if (sessions && sessions.length > 0) {
+									this.sessionIdToClose = sessions[0].session_id;
+									this.closeGameSession();
+								} else {
+									this.openGameSession();
+								}
+							}
+						})
+						.catch((response) => {
+							console.log(response);
+						});
+				},
+				closeGameSession() {
+					let formData = new FormData();
+					formData.append("usertoken", this.usertoken);
+					formData.append("sessiontoken", this.sessiontoken);
+					formData.append("sessionid", this.sessionIdToClose);
+					this.$http
+						.post("session/close", formData)
+						.then((response) => {
+							let result = response.data;
+							if (result.result == 0) {
+								this.openGameSession();
+							}
+						})
+						.catch((response) => {
+							console.log(response);
+						});
+				},
+				openGameSession() {
+					this.launcherUrl = null;
+					let formData = new FormData();
+					formData.append("usertoken", this.usertoken);
+					formData.append("sessiontoken", this.sessiontoken);
+					formData.append("gameid", this.gameid);
+					formData.append("type", "REAL");
+					formData.append("amount", 0);
+					formData.append("currency", this.currency);
+					this.$http
+						.post("session/open", formData)
+						.then((response) => {
+							let result = response.data;
+							// se e' tutto ok genero l'url del gioco
+							if (result.result == 0) {
+								this.launcherUrl = this.generateLauncherUrl(
+									result.session.sessionid,
+									"real"
+								);
+							}
+						})
+						.catch((response) => {
+							console.log(response);
+						});
+				},
+				generateLauncherUrl(sessionid, mode) {
+					return (this.launcherUrl =
+						this.mtpuUrlLaunch +
+						"?usertoken=" +
+						encodeURIComponent(this.usertoken) +
+						"&sessiontoken=" +
+						encodeURIComponent(this.sessiontoken) +
+						"&sessionid=" +
+						encodeURIComponent(sessionid) +
+						"&operator=" +
+						encodeURIComponent(this.operator) +
+						"&language=" +
+						this.codeLocate() +
+						"&mode=" +
+						encodeURIComponent(mode) +
+						"&game=" +
+						encodeURIComponent(this.gameid) +
+						"&device=" +
+						encodeURIComponent("mobile") +
+						"&currency=" +
+						encodeURIComponent(this.currency)) +
+						"&lobby=" +
+						this.serverUrl +
+						"session/lobby/close"
+				},
+				codeLocate() {
+					if (this.language == "en-GB")
+						return "en_GB";
+					else if (this.language == "es-ES")
+						return "es_ES";
+					return "en_GB";
+				},
+				replaceImgByDefault(e) {
+					e.target.src = "images/not-found.png";
+				},
+				onImageLoad() {
+					this.imageLoading = false;
+				},
+				getGames() {
+					this.$http
+						.get("games-new")
+						.then((response) => {
+							this.gamesNew = response.data.gamesNew;
+						})
+						.catch((response) => {
+							console.log(response);
+						});
+				},
+				backScroll(containerId) {
+					this.sideScroll(containerId, "left", 10, 800, 20);
+				},
+				nextScroll(containerId) {
+					this.sideScroll(containerId, "right", 10, 800, 20);
+				},
+				sideScroll(containerId, direction, speed, distance, step) {
+					let element = document.getElementById(containerId);
+					let scrollAmount = 0;
+					let slideTimer = setInterval(function () {
+						if (direction == "left") {
+							element.scrollLeft -= step;
+						} else {
+							element.scrollLeft += step;
+						}
+						scrollAmount += step;
+
+						if (scrollAmount >= distance) {
+							window.clearInterval(slideTimer);
+						}
+						let maxScroll = element.scrollWidth - element.offsetWidth;
+						if (element.scrollLeft == maxScroll)
+							document.getElementById("slide" + containerId).style.visibility =
+								"hidden";
+						else
+							document.getElementById("slide" + containerId).style.visibility =
+								"visible";
+
+						if (element.scrollLeft == 0)
+							document.getElementById("slideBack" + containerId).style.visibility =
+								"hidden";
+						else
+							document.getElementById("slideBack" + containerId).style.visibility =
+								"visible";
+					}, speed);
+				},
+			}
+		});
+	</script>
+
+</body>
+
+</html>

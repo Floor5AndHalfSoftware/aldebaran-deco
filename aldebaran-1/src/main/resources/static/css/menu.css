@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none
+}
+
+#cssmenu {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.loteria-mobile {
+    transition: all ease 10s;
+}
+
+nav {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+
+
+
+
+#cssmenu:after,
+#menuMobile:after {
+    content: ".";
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+#cssmenu #head-mobile {
+    display: none;
+}
+
+#cssmenu {
+    font-family: sans-serif;
+}
+
+#menuMobile {
+    margin: 0;
+    background: #fff;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#menuMobile>li {
+    float: left;
+}
+
+#menuMobile>li>a {
+    text-transform: uppercase;
+    padding: 17px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    border-right: 1px solid #e0e0e0;
+}
+
+#cssmenu .login a {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: top;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #fefefe;
+    font-weight: 400;
+    /*font-family: "Anton";*/
+    padding: 13px 15px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.5s ease 0;
+    -moz-transition: all 0.5s ease 0;
+    -ms-transition: all 0.5s ease 0;
+    -o-transition: all 0.5s ease 0;
+    transition: all 0.5s ease 0;
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .2);
+    text-shadow: 5px 3px 0px #efa500;
+    background-image: radial-gradient(#f7ad05, #f7ab00);
+    filter: drop-shadow(0 0px 10px rgba(254, 215, 125, 0.2));
+}
+
+#menuWrapper {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #1A1E47;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+
+#menuMobile {
+    z-index: 1001;
+}
+
+#menuMobile a i {
+    margin-left: 2px;
+    margin-right: 10px;
+    color: #2CA9E0;
+}
+
+#menuMobile>li:hover>a,
+#cssmenu ul li.active a {
+    color: #fafafa;
+}
+
+/*
+.mobile .dropdown-menu > li > a {
+    font-size: 14px;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Helvetica";
+    color: #ffff !important;
+}*/
+
+#cssmenu ul li.active a {
+    border: none;
+}
+
+#menuMobile>li.has-sub>a {
+    padding-right: 30px;
+}
+
+#menuMobile>li.has-sub>a:after {
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #ddd;
+    content: '';
+}
+
+#menuMobile>li.has-sub>a:before {
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #ddd;
+    content: '';
+    -webkit-transition: all 10s ease;
+    -ms-transition: all 10s ease;
+    transition: all 10s ease;
+}
+
+#menuMobile>li.has-sub:hover>a:before {
+    top: 23px;
+    height: 0;
+}
+
+
+#cssmenu ul ul li {
+    height: 0;
+    -webkit-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+#cssmenu li:hover>ul {
+    left: auto;
+}
+
+#cssmenu li:hover>ul>li {
+    height: 35px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menuMobile>li.has-sub>ul>li.active>a,
+#menuMobile ul>li.has-sub>ul>li.active>a {
+    border-top: 1px solid #333
+}
+
+#menuMobileProfile {
+    display: none;
+}
+
+@media screen and (max-width:1190px) {
+
+    .logo {
+        position: relative;
+        width: 150px;
+        float: none;
+    }
+
+    .logo img {
+        height: 48px;
+        padding-top: 12px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    #cssmenu {
+        width: 100%
+    }
+
+    #cssmenu ul {
+        width: 100%;
+        height: 100%;
+        background: #1A1E47;
+    }
+
+    #cssmenu ul ul li,
+    #cssmenu li:hover>ul>li {
+        height: auto
+    }
+
+    #menuMobile>li {
+        float: none
+    }
+
+    #cssmenu #head-mobile {
+        display: block;
+        height: 80px;
+        color: #ddd;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .button {
+        position: absolute;
+        top: 17px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 100%;
+        padding: 8px 0px;
+        z-index: 12399994;
+        width: 40px;
+        height: 40px;
+    }
+
+    #header .row [class^="col-"]>i {
+        position: relative;
+        cursor: pointer;
+        color: #fff;
+        z-index: 12399994;
+        width: 40px;
+        height: 40px;
+    }
+
+    button.close,
+    .button .close {
+        color: #fff;
+        opacity: 0.95;
+    }
+
+    .button.menu-opened:after {
+        -webkit-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+        top: 23px;
+        border: 0;
+        height: 2px;
+        width: 19px;
+        background: #fafafa;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .button.menu-opened:before {
+        top: 23px;
+        background: #fafafa;
+        width: 19px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #cssmenu .submenu-button {
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        display: block;
+        height: 43px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    #cssmenu .submenu-button.submenu-opened {
+        background: #ffffff;
+    }
+
+    #cssmenu .submenu-button:after {
+        position: absolute;
+        top: 22px;
+        right: 19px;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: #ddd;
+        content: '';
+    }
+
+
+    #cssmenu .submenu-button.submenu-opened:after {
+        background: #fafafa
+    }
+
+    #cssmenu .submenu-button:before {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: #ddd;
+        content: '';
+    }
+
+
+    #cssmenu .submenu-button.submenu-opened:before {
+        display: none;
+    }
+
+
+    #menuMobile>li.has-sub>ul>li.active>a,
+    #menuMobile ul>li.has-sub>ul>li.active>a {
+        border-top: none;
+    }
+
+    #header+div {
+        top: 80px;
+    }
+
+    #newsletterfooter {
+        margin-top: 80px
+    }
+}

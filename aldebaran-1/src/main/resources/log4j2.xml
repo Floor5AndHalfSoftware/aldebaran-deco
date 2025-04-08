@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration verbose="true" monitorInterval="30">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d %-5p %c - %m}%n"/>
+        </Console>
+
+        <RollingFile name="RollingFile"
+            fileName="/var/log/com.aldebaran/com.aldebaran.log"
+            filePattern="/var/log/com.aldebaran/com.aldebaran-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %-5p %c - %m %n</Pattern>
+            </PatternLayout>
+            <Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy max="35">
+                <Delete basePath="/var/log/com.aldebaran/" maxDepth="1">
+                    <IfFileName glob="com.aldebaran-*.log.gz">
+                        <IfLastModified age="P30D">
+                        </IfLastModified>
+                    </IfFileName>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- LOG everything at INFO level -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+        <!-- LOG "com.com.aldebaran*" level -->
+        <Logger name="com.aldebaran" level="debug"/>
+       	<Logger name="org.hibernate" level="warn"/>
+		<Logger name="org.springframework" level="warn"/>
+    </Loggers>
+
+</Configuration>

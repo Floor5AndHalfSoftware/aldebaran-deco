@@ -1,0 +1,145 @@
+spring:
+  application:
+    name: aldebaran
+  banner:
+    location: classpath:banner.txt
+
+  mail:
+    host: ${SMTP_HOST}
+    port: ${SMTP_PORT}
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  resources:
+    cache:
+      cachecontrol:
+        max-age: 8640000
+        must-revalidate: true
+
+  thymeleaf:
+    cache: false
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    open-in-view: false
+
+server:
+  port: 8080
+  url: http://localhost:8080/
+  error:
+    whitelabel:
+      enabled: false
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,image/gif,image/ief,image/jpeg
+    min-response-size: 1024
+  http2:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+
+client:
+  skin: bet593
+  currency: USD
+  locate: es-ES
+  js:
+    debug: true
+  lastdays: 7
+  urlsso: https://loteria2.mongibello.tech/comefrom
+  sportsbook:
+    walletcode: 071221
+    js: https://sb2wsdk-altenar2-stage.biahosted.com/altenarWSDK.js
+  operator: loterianacional
+  gsNewLauncher: blueocean,worldmatch
+  gsNewLauncher1: goldenrace
+  liw:
+    js: https://services.testnisite.com:8103/RNGWidgetContent/magicwin/?partner=colombiabet593
+  clearsale:
+    clientid: bet593.ec-sandbox
+
+underAge: 18
+betMethod: WORLD
+
+ws:
+  url:
+    core:
+      frontend: http://loteria.mongibello.tech:6001/frontend/
+      backend: http://loteria.mongibello.tech:6001/backend/
+    payments:
+      frontend: http://loteria.mongibello.tech:6004/frontend/
+    games:
+      frontend: http://loteria.mongibello.tech:6002/frontend/
+      backend: http://loteria.mongibello.tech:6002/backend/
+    cms: http://loteria.mongibello.tech:6005/cms/
+    reports:
+      frontend: http://loteria.mongibello.tech:6006/frontend/
+      backend: http://loteria.mongibello.tech:6006/backend/
+
+loteria:
+  url:
+    detail: https://ventas-prueba.loteria.com.ec/compra_tus_juegos/detalle/
+
+secret:
+  shared:
+    auth: ${SECRET_AUTH}
+    user: ${SECRET_USER}
+    transaction: ${SECRET_TRANSACTION}
+    session: ${SECRET_SESSION}
+    bonus: ${SECRET_BONUS}
+    sportsbook: ${SECRET_SPORTSBOOK}
+    operation: ${SECRET_OPERATION}
+    nonce: ${SECRET_NONCE}
+
+mtpu:
+  urls:
+    main: https://loteria.mongibello.tech/in/
+    launch: https://loteria.mongibello.tech/launcher/service/launcher/alboran
+  username: ${MTPU_USERNAME}
+  password: ${MTPU_PASSWORD}
+
+
+mail:
+  from: ${MAIL_FROM}
+  contactUsTo: ${MAIL_CONTACT_TO}
+  contactUsSubject: "[LoteriaNacional Localhost] Message from"
+  exceptionTo: ${MAIL_EXCEPTION_TO}
+  exceptionSubject: "[LoteriaNacional Localhost] Avviso: Eccezione non gestita"
+
+google:
+  recaptcha:
+    key: ${RECAPTCHA_KEY}
+    secret: ${RECAPTCHA_SECRET}
+  apiUrl: https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}
+
+geolite:
+  path: /home/leo/Downloads/GeoLite2-Country
+  url: https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=${GEOLITE_PASSWORD}&suffix=tar.gz
+  enabled: true
+  country: EC
+  username: ${GEOLITE_USERNAME}

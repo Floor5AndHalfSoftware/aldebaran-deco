@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Pronósticos deportivos | Juegos Online | bet593.ec</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Pronósticos deportivos | Juegos Online | bet593.ec">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+	<!-- Plugin CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.png" />
+	<!-- / -->
+	<!-- Theme Style -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- / -->
+	<!-- JQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<!-- / -->
+	<!-- LIW Integration -->
+	<script type="text/javascript" th:src="*{liwJs}"></script>
+	<!-- / -->
+
+</head>
+
+<body style="background-color: #e5e5e5;">
+	<input type="hidden" id="currency" th:value="*{currency}" />
+	<input type="hidden" id="lang" th:value="*{lang}" />
+	<input type="hidden" id="token" th:value="*{token}" />
+	<div>
+		<div id="magicwin_container"></div>
+	</div>
+	<script>
+		var setup = {
+			container: "magicwin_container", //id container
+			lang: document.getElementById("lang").value, //default: en.  en||hr||sr||de||bs
+			runFrom: 1, //0 - undefind, 1 - Desktop app, 2 - desktop web, 3 - mob web, 4 - mob app
+			options: {
+				//MagicWin  game options
+				game: "Lotto548", //default: LuckySix.  LuckySix||Lotto548||Lotto748||Special||Dealer||Special2||Lotto520||Lotto1020||Dealer2||Lotto137||Lotto580 ||Lotto1080 ||Lotto2080||Lotto3080||Lotto4080||Lotto5080||Keno580||Keno1080||Keno2080
+				defaultCurrency: document.getElementById("currency").value, //default: 'EUR' if user don't signed, widget will be open with default currency
+				skin: 1, // default 1, 1 -white, 2 - dark
+				oddCulture: 0, // odds culture:    1 - SAD, 2 - Malaysia, 3 - Indonesia, 4 - Hong Kong, 5 - England (fraction), 0 - default decimal
+			},
+			UserToken: document.getElementById("token").value, //"7B866D27-945B-430E-BE04-8EB98AF08EC1",
+			// UserToken: '',
+			onLoad: function (instance) {
+				console.log("LIW - Game is loaded.");
+			},
+			onChangeBalance: function () {
+				console.log("LIW - Balance is changed"); //calling after Bet ticket, Win ticket, Tip dealer
+			},
+		};
+		MagicGames.addWidget(setup);
+
+	</script>
+
+</body>
+
+</html>

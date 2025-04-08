@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Pronósticos deportivos | Juegos Online | bet593.ec</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Pronósticos deportivos | Juegos Online | bet593.ec">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+	<!-- Plugin CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.png" />
+	<!-- / -->
+	<!-- Theme Style -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Sports book -->
+	<script type="text/javascript" th:src="*{sportsbookJs}"></script>
+	<!--<script type="text/javascript" th:src="*{sportsbookJsInit}" th:if="${sportsbookJsInit != ''}"></script>-->
+
+</head>
+
+<body style="background-color: #e5e5e5;">
+	<input type="hidden" id="sportsbookWalletcode" th:value="*{sportsbookWalletcode}" />
+	<div class="casino-btn" style="padding-top: 5px;position: -webkit-sticky; position: sticky; top: 0; z-index: 400">
+		<a class="btn-4 yellow-btn" style="padding: 7px 18px;" href="javascript:void(0);" onclick="openSelector()">
+			Inicio
+		</a>
+	</div>
+	<div style="padding: 5px 10px">
+		<div id="altenarsportsbook"></div>
+	</div>
+	<script>
+		var initParams = {
+			walletcode: document.getElementById("sportsbookWalletcode").value,
+			lang: "es-ES",
+			numformat: "en-GB",
+			page: "prelive",
+			statechangecallback: () => window.scrollTo(0, 0),
+			/*betreservationcallback: (params) => {
+				console.log("betreservationcallback");
+				printSportBetReserve(params.ReservationKey);
+			}*/
+		};
+
+		if (window.AltenarSportsbook) {
+			var ASb = new AltenarSportsbook("#altenarsportsbook", initParams);
+		}
+
+		// Capture printTicket click
+		var rootElement = document.querySelector("body");
+		rootElement.addEventListener(
+			"click",
+			(event) => {
+				var reserveNumberElement = document.querySelector("._asb_betslip-booking-text-code");
+				if (reserveNumberElement != null) {
+					var buttonElement = document.querySelector('._asb_betslip-booking-print');
+					var targetElement = event.target;
+					if (buttonElement.contains(targetElement)) {
+						event.stopPropagation();
+						printSportBetReserve(reserveNumberElement.innerText);
+					}
+				}
+			},
+			true
+		);
+
+
+		function openSelector() {
+			console.info("openSelector");
+			parent.window.postMessage({ action: 'close' }, '*');
+		}
+
+		function printSportBetReserve(reserveNumber) {
+			console.info("printSportBetReserve:", reserveNumber);
+			parent.window.postMessage({ action: 'print', idreserva: reserveNumber }, '*');
+		}
+
+	</script>
+
+</body>
+
+</html>

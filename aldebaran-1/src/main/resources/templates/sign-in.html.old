@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Registro - Bet593</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="colorlib.com" />
+
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+  <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css" />
+  <!--BOOTSTRAP-->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/login-style.css" />
+  <link rel="icon" href="images/favicon.png" />
+  <script th:src="*{googleApiUrl}" th:if="${googleApiUrl != ''}"></script>
+</head>
+
+<body>
+  <input type="hidden" id="__currency" th:value="*{currency}" />
+  <input type="hidden" id="__underAge" th:value="*{underAge}" />
+  <input type="hidden" id="__lang" th:value="*{lang}" />
+  <input type="hidden" id="__googleKey" th:value="*{googleKey}" />
+  <input type="hidden" id="__googleSecret" th:value="*{googleSecret}" />
+  <input type="hidden" id="__affiliateRegisterToken" th:value="*{affiliateRegisterToken}" />
+  <input type="hidden" id="__pdsRegisterToken" th:value="*{pdsRegisterToken}" />
+  <div class="wrapper" id="app" v-cloak>
+    <form id="wizard">
+      <div class="logoc">
+        <img src="images/logobet593.png" style="height: 100px" alt="" />
+      </div>
+      <!-- SECTION 1 -->
+      <h2></h2>
+      <section>
+        <div class="inner">
+          <div class="image-holder" v-for="(c, i) in contentsOne" :key="c.id">
+            <img class="left-image" v-if="recordOne && recordOne.mime_type"
+              :src="'data:' + recordOne.mime_type + ';base64,' + recordOne.content" />
+          </div>
+          <div class="custom-form-content">
+            <div class="custom-form-header">
+              <h3>Registro Bet593</h3>
+            </div>
+            <p>Iniciemos el proceso de registro</p>
+
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input id="firstName" type="text" placeholder="Nombres" class="custom-form-control" required
+                  maxlength="150" v-model="firstName" @keyup="
+									validateGenericField(
+									'firstName',
+									firstName,
+									validateNameSurname,
+									null
+									)
+								" />
+              </div>
+              <div class="custom-form-holder">
+                <input id="lastName" type="text" placeholder="Apellidos" class="custom-form-control" required
+                  maxlength="150" v-model="lastName" @keyup="
+									validateGenericField(
+									'lastName',
+									lastName,
+									validateNameSurname,
+									null
+									)
+								" />
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <div class="fechado">Fecha de Nacimiento:</div>
+                <input id="birthdate" type="date" placeholder="DD/MM/YYYY" class="custom-form-control fechado2" required
+                  v-model="birthDate" @keyup="
+									validateGenericField(
+									'birthdate',
+									birthDate,
+									underAgeValidate,
+									null
+									)
+								" />
+              </div>
+              <div class="custom-form-holder">
+                <input v-model="mobile" id="mobile" type="text" placeholder="Teléfono 0909090909"
+                  class="custom-form-control" required maxlength="150" @keyup="
+									validateGenericField(
+									'mobile',
+									mobile,
+									validateMobilePhone,
+									null
+									)
+								" />
+              </div>
+            </div>
+
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <select id="province" v-model="province" class="custom-form-control" required>
+                  <option v-for="p in provinces" :key="p.id" :value="p.id">
+                    {{ p.name }}
+                  </option>
+                </select>
+              </div>
+              <div class="custom-form-holder">
+                <select class="custom-form-control" id="city" v-model="city" required>
+                  <option v-for="c in cityByProvince" :key="c.id" :value="c.name">
+                    {{ c.name }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input maxlength="100" name="username" id="username" v-model="username" type="text"
+                  placeholder="Correo electrónico Ej: demo@demo.com" class="custom-form-control" required @keyup="
+                    validateGenericField(
+                      'username',
+                      username,
+                      validateEmail,
+                      null
+                    )
+                  " />
+              </div>
+              <div class="checkbox-tick">
+                <label class="male">
+                  <input type="radio" name="gender" v-model="gender" checked="" value="M" />
+                  Hombre<br />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="female">
+                  <input type="radio" name="gender" v-model="gender" value="F" />
+                  Mujer<br />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input type="text" placeholder=">>INGRESA CÓDIGO DE REGISTRO<<" class="custom-form-control bono"
+                  id="registrationCode" maxlength="150" name="registrationCode" v-model="registrationCode" />
+              </div>
+            </div>
+            <div class="espaciofor"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <h2></h2>
+      <section>
+        <div class="inner">
+          <div class="image-holder" v-for="(c, i) in contentsOne" :key="c.id">
+            <img class="left-image" v-if="recordTwo && recordTwo.mime_type"
+              :src="'data:' + recordTwo.mime_type + ';base64,' + recordTwo.content" />
+          </div>
+          <div class="custom-form-content">
+            <div class="custom-form-header">
+              <h3>Registro Bet593</h3>
+            </div>
+            <p>Ya casi terminamos, ingresemos información de seguridad.</p>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <select class="custom-form-control" id="document-type" v-model="documentType" required
+                  @change="documentNumber = ''">
+                  <option v-for="dt in documentTypes" :key="dt.code" :value="dt.code">
+                    {{ dt.description }}
+                  </option>
+                </select>
+              </div>
+              <div class="custom-form-holder">
+                <input type="text" placeholder="# de documento" class="custom-form-control" maxlength="150"
+                  name="documentNumber" id="documentNumber" v-model="documentNumber" @keyup="
+                    validateGenericField(
+                      'documentNumber',
+                      documentNumber,
+                      (documentType == 'CI' || documentType == 'CE') ? validateCedula : validatePassport,
+                      null
+                    )
+                  " required />
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input type="password" placeholder="Contraseña" class="custom-form-control" name="password"
+                  id="password" v-model="password" required @keyup="
+                    validateGenericField(
+                      'password',
+                      password,
+                      validatePassword,
+                      null
+                    )
+                  " />
+              </div>
+              <div class="custom-form-holder">
+                <input type="password" placeholder="Confirmar Contraseña" class="custom-form-control" name="confirmPass"
+                  id="confirmPass" v-model="confirmPass" required @keyup="
+                    validateGenericField(
+                      'password',
+                      password,
+                      validatePassword,
+                      null
+                    )
+                  " />
+              </div>
+            </div>
+            <div class="custom-form-row w-101">
+              <h4>
+                Preguntas de Seguridad -
+                <strong>Contestar al menos 2</strong>
+              </h4>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input type="text" placeholder="¿Cuál es el segundo nombre de tu mamá?" class="custom-form-control"
+                  v-model="secretAnswer[0]" maxlength="150" />
+              </div>
+              <div class="custom-form-holder">
+                <input type="text" placeholder="¿Cuál es tu mascota favorita?" class="custom-form-control"
+                  v-model="secretAnswer[1]" />
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="custom-form-holder">
+                <input type="text" placeholder="¿Cuál es tu fruta favorita?" class="custom-form-control"
+                  v-model="secretAnswer[2]" />
+              </div>
+              <div class="custom-form-holder">
+                <input type="text" placeholder="¿Cuál es tu equipo favorito?" class="custom-form-control"
+                  v-model="secretAnswer[3]" />
+              </div>
+            </div>
+            <div class="custom-form-row">
+              <div class="checkbox-tick">
+                <label>
+                  <input type="radio" name="condiciones" v-model="condiciones" checked="" value="1" />
+                  Acepto que soy mayor de 18 años, he leído y aceptado los <a target="_BLANK"
+                    href="/doc/Terminos%20y%20Condiciones.pdf">Términos y condiciones generales</a>, <a target="_BLANK"
+                    href="/doc/Juego%20Responsable.pdf">políticas de juego responsable</a><a target="_BLANK"
+                    href="/doc/politica_de_seguridad_y_privacidad.pdf"> y las políticas de privacidad.</a> </a><br />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <div class="modal fade" id="modalMessage" tabindex="-1" aria-labelledby="modalMessageLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Atenci&oacute;n: revisa los siguientes campos
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-danger" role="alert" v-if="errors && errors.length > 0">
+                <span v-for="error in errors"> - {{ error}} <br /> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- JQUERY -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+  <!-- JQUERY STEP -->
+  <script src="js/jquery.steps.js"></script>
+  <!-- Template created and distributed by Colorlib -->
+
+  <script src="js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/mixins.js"></script>
+  <script src="js/locate.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+    Vue.prototype.$http = axios.create({
+      timeout: 30000,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const vue = new Vue({
+      el: "#app",
+      mixins: [common],
+      data: {
+        loading: false,
+        errors: [],
+        provinces: [],
+        cities: [],
+        username: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        age: "",
+        mobile: "",
+        province: "",
+        city: "",
+        country: "Ecuador",
+        birthDate: "1985-01-01",
+        confirmPass: "",
+        documentType: "",
+        documentTypes: [],
+        documentNumber: "",
+        taxcode: "",
+        secretQuestions: [
+          { content: "¿Cuál es el segundo nombre de tu mamá?" },
+          { content: "¿Cuál es tu mascota favorita?" },
+          { content: "¿Cuál es tu fruta favorita?" },
+          { content: "¿Cuál es tu equipo favorito?" },
+        ],
+        secretAnswer: [],
+        registrationCode: "",
+        ip: "",
+        success: null,
+        successMessage: "",
+        contentsOne: [],
+        contentsTwo: [],
+        recordOne: null,
+        recordTwo: null,
+        gender: "M",
+        userid: null,
+        condiciones: null,
+      },
+      created() {
+        this.registrationCode = this.registrationCodePreLoad();
+        this.getExternalIpAddress();
+        this.getProvinces();
+        this.getCities();
+        this.getDocumentTypes();
+      },
+      mounted() {
+        this.setWizardSteps();
+        this.getBannerFile1();
+        this.getBannerFile2();
+      },
+      computed: {
+        cityByProvince() {
+          let cities = this.cities.filter(
+            (c) => c.province_id == this.province
+          );
+          if (cities && cities.length > 0) this.city = cities[0].name;
+          return cities;
+        },
+        secretAnswerRespond() {
+          let num = 0;
+          for (let i = 0; i < this.secretQuestions.length; i++) {
+            if (this.secretAnswer[i] && this.secretAnswer[i].length > 0)
+              num++;
+          }
+          return num;
+        },
+      },
+      methods: {
+        async getFileContent(id, bannerNumber) {
+          if (id) {
+            let formData = new FormData();
+            formData.append("id", id);
+            let response = await this.$http.post("cms/file/content", formData);
+            let result = response.data;
+            if (result.result == 0) {
+              if (bannerNumber == 1) this.recordOne = result.record;
+              else this.recordTwo = result.record;
+            }
+          }
+        },
+        getBannerFile1() {
+          let formData = new FormData();
+          formData.append(
+            "language",
+            document.getElementById("__lang").value
+          );
+          formData.append("category", "banner signin step 1");
+          this.$http.post("cms/file/list", formData).then((response) => {
+            let result = response.data;
+            if (result.result == 0) {
+              this.contentsOne = result.contents;
+              this.getFileContent(this.contentsOne[0].id, 1);
+            }
+          });
+        },
+        getBannerFile2() {
+          let formData = new FormData();
+          formData.append(
+            "language",
+            document.getElementById("__lang").value
+          );
+          formData.append("category", "banner signin step 2");
+          this.$http.post("cms/file/list", formData).then((response) => {
+            let result = response.data;
+            if (result.result == 0) {
+              this.contentsTwo = result.contents;
+              this.getFileContent(this.contentsTwo[0].id, 2);
+            }
+          });
+        },
+        getExternalIpAddress() {
+          this.$http
+            .get("getip)
+            .then((response) => {
+              this.ip = response.data.ip.split(",")[0];
+            })
+            .catch((response) => { });
+        },
+        getDocumentTypes() {
+          this.$http
+            .get("documentTypes?lang=es-ES")
+            .then((response) => {
+              this.documentTypes = response.data.documentTypes;
+              this.documentType = this.documentTypes[0].code;
+            })
+            .catch(() => { });
+        },
+        setWizardSteps() {
+          let self = this;
+          $("#wizard").steps({
+            headerTag: "h2",
+            bodyTag: "section",
+            transitionEffect: "fade",
+            enableAllSteps: true,
+            transitionEffectSpeed: 500,
+            labels: {
+              finish: "REGISTRARSE",
+              next: "Siguiente",
+              previous: "Atrás",
+            },
+            onFinished: function (event, currentIndex) {
+              if (!self.loading) self.recaptchaTest();
+            },
+            onStepChanging: function onChange(event, currentIndex, newIndex) {
+              self.errors = [];
+              if (newIndex == 1) {
+                self.validateGenericField(
+                  "firstName",
+                  self.firstName,
+                  self.validateNameSurname,
+                  self.getLocate("login-15")
+                );
+
+                self.validateGenericField(
+                  "lastName",
+                  self.lastName,
+                  self.validateNameSurname,
+                  self.getLocate("login-16")
+                );
+
+                self.validateGenericField(
+                  "mobile",
+                  self.mobile,
+                  self.validateMobilePhone,
+                  self.getLocate("login-19")
+                );
+
+                self.validateGenericField(
+                  "username",
+                  self.username,
+                  self.validateEmail,
+                  self.getLocate("login-9")
+                );
+
+                self.validateGenericField(
+                  "birthdate",
+                  self.birthDate,
+                  self.underAgeValidate,
+                  self.getLocate("login-12") +
+                  self.getLocate("login-13") +
+                  " " +
+                  document.getElementById("__underAge").value +
+                  " " +
+                  self.getLocate("login-21")
+                );
+                if (self.errors && self.errors.length > 0) {
+                  $("#modalMessage").modal("show");
+                  return false;
+                } else {
+                  return true;
+                }
+              }
+              return true;
+            },
+          });
+
+          $(".wizard > .steps li a").click(function () {
+            $(this).parent().addClass("checked");
+            $(this).parent().prevAll().addClass("checked");
+            $(this).parent().nextAll().removeClass("checked");
+          });
+          // Custome Jquery Step Button
+          $(".forward").click(function () {
+            $("#wizard").steps("next");
+          });
+
+          $(".backward").click(function () {
+            $("#wizard").steps("previous");
+          });
+
+          // Select Dropdown
+          $("html").click(function () {
+            $(".select .dropdown").hide();
+          });
+          $(".select").click(function (event) {
+            event.stopPropagation();
+          });
+          $(".select .select-control").click(function () {
+            $(this).parent().next().toggle();
+          });
+          $(".select .dropdown li").click(function () {
+            $(this).parent().toggle();
+            var text = $(this).attr("rel");
+            $(this).parent().prev().find("div").text(text);
+          });
+        },
+        validateGenericField(fieldId, field, funcValidate, messageError) {
+          let fieldElement = document.getElementById(fieldId);
+          if (!funcValidate(field)) {
+            if (messageError) this.errors.push(messageError);
+            fieldElement.classList.add("my-is-invalid");
+          } else {
+            fieldElement.classList.remove("my-is-invalid");
+          }
+        },
+        getRegularExpressionDocumentTypes() {
+          let documentType = this.documentTypes.find(
+            (dt) => dt.code == this.documentType
+          );
+          if (documentType) return documentType.regularExpression;
+
+          return null;
+        },
+        validateDocumentNumber() {
+          let documentNumber = document.getElementById("documentNumber");
+
+          if (
+            ((this.documentType == "CI" || this.documentType == "CE") &&
+              !this.validateCedula(this.documentNumber)) ||
+            !this.validateGeneric(
+              this.documentNumber,
+              this.getRegularExpressionDocumentTypes()
+            )
+          ) {
+            this.errors.push(this.getLocate("login-14"));
+            documentNumber.classList.add("my-is-invalid");
+          } else documentNumber.classList.remove("my-is-invalid");
+        },
+        getProvinces() {
+          this.$http
+            .get("provinces")
+            .then((response) => {
+              this.provinces = response.data.provinces;
+              this.province = this.provinces[0].id;
+            })
+            .catch(() => { });
+        },
+        getCities() {
+          this.$http
+            .get("cities")
+            .then((response) => {
+              this.cities = response.data.cities;
+              this.city = this.cities[0].name;
+            })
+            .catch((response) => {
+              this.showError(response);
+            });
+        },
+        removeTag(content) {
+          return content.replace("<p>", "").replace("</p>", "");
+        },
+        validateCedula(cedula) {
+          let cedula1 = cedula.trim();
+          if (
+            typeof cedula1 == "string" &&
+            cedula.length == 10 &&
+            /^\d+$/.test(cedula1)
+          ) {
+            let digitos = cedula1.split("").map(Number);
+            let codigo_provincia = digitos[0] * 10 + digitos[1];
+
+            //if (codigo_provincia >= 1 && (codigo_provincia <= 24 || codigo_provincia == 30) && digitos[2] < 6) {
+
+            if (
+              codigo_provincia >= 1 &&
+              (codigo_provincia <= 24 || codigo_provincia == 30)
+            ) {
+              let digito_verificador = digitos.pop();
+
+              let digito_calculado =
+                digitos.reduce(function (valorPrevio, valorActual, indice) {
+                  return (
+                    valorPrevio -
+                    ((valorActual * (2 - (indice % 2))) % 9) -
+                    (valorActual == 9) * 9
+                  );
+                }, 1000) % 10;
+
+              return digito_calculado === digito_verificador;
+            }
+          }
+          return false;
+        },
+        validateGeneric(text, regularExpression) {
+          if (regularExpression)
+            return new RegExp(regularExpression).test(text);
+          else return true;
+        },
+        signUp() {
+          this.errors = [];
+
+          if (this.condiciones != "1") {
+            this.errors.push("Debe aceptar los Términos y Condiciones");
+            $("#modalMessage").modal("show");
+            return;
+          }
+
+          //check dei campi required
+          let signUpForm = document.getElementById("wizard");
+          if (signUpForm.checkValidity() === false) {
+            signUpForm.classList.add("was-validated");
+            this.errors.push(this.getLocate("login-6"));
+            $("#modalMessage").modal("show");
+            return;
+          }
+
+          //validiamo le domande segrete
+          let secQuestionsJson = "";
+          if (this.secretAnswerRespond > 1) {
+            let sec_questions = {};
+            for (let i = 0; i < this.secretQuestions.length; i++) {
+              if (this.secretAnswer[i] && this.secretAnswer[i].length > 0)
+                sec_questions[
+                  this.removeTag(this.secretQuestions[i].content)
+                ] = this.secretAnswer[i];
+            }
+            secQuestionsJson = JSON.stringify(sec_questions);
+          } else {
+            this.errors.push(this.getLocate("secret-questions-3"));
+          }
+
+          //controllo sui campi particolari
+          this.validateDocumentNumber();
+
+          this.validateGenericField(
+            "password",
+            this.password,
+            this.validatePassword,
+            this.getLocate("password-confirmation-1")
+          );
+
+          if (this.password != this.confirmPass) {
+            this.errors.push(this.getLocate("password-confirmation"));
+          }
+
+          if (this.validCaptcha == "false")
+            this.errors.push(this.getLocate("invalid-captcha"));
+          else if (this.validCaptcha == "max")
+            this.errors.push(this.getLocate("max-captcha"));
+
+          //se ci sono problemi nella validazione dei campi esco senza eseguire la chiamata
+          if (this.errors && this.errors.length > 0) {
+            $("#modalMessage").modal("show");
+            return;
+          }
+          this.loading = true;
+          this.$http
+            .post("register", {
+              firstname: this.firstName.trim(),
+              lastname: this.lastName.trim(),
+              taxcode: this.documentNumber,
+              address: null,
+              city: this.city,
+              zip: null,
+              country: this.country,
+              birth_date: this.birthDate,
+              email: this.username.trim(),
+              password: this.password,
+              sec_answer: "",
+              sec_question: "",
+              language: "es-ES",
+              currency: document.getElementById("__currency").value,
+              document_id: this.documentNumber,
+              document_type: this.documentType,
+              mobile: this.mobile.trim(),
+              sec_questions: secQuestionsJson,
+              registration_code: this.registrationCode.trim(),
+              externalip: this.ip,
+              gender: this.gender,
+              affiliate_register_token: document.getElementById("__affiliateRegisterToken").value,
+              pds_register_token: document.getElementById("__pdsRegisterToken").value,
+            })
+            .then((response) => {
+              console.log(response.data);
+              if (response.data.result == 0) {
+                this.userid = response.data.userid;
+                location.href = "/thankyou?userId=" + this.userid;
+                //this.login();
+              } else {
+                this.errors = [this.getLocate(response.data.description)];
+                $("#modalMessage").modal("show");
+              }
+            })
+            .catch((response) => {
+              this.errors = [this.getLocate("login-7")];
+            })
+            .finally(() => {
+              this.loading = false;
+            });
+        },
+        getLocate(key) {
+          if (LANGUAGES[document.getElementById("__lang").value][key])
+            return LANGUAGES[document.getElementById("__lang").value][key];
+          else return key;
+        },
+        underAgeValidate(birthday) {
+          // it will accept two types of format yyyy-mm-dd and yyyy/mm/dd
+          let optimizedBirthday = birthday.replace(/-/g, "/");
+
+          //set date based on birthday at 01:00:00 hours GMT+0100 (CET)
+          let myBirthday = new Date(optimizedBirthday);
+
+          // set current day on 01:00:00 hours GMT+0100 (CET)
+          let currentDate = new Date().toJSON().slice(0, 10) + " 01:00:00";
+
+          // calculate age comparing current date and borthday
+          let myAge = ~~((Date.now(currentDate) - myBirthday) / 31557600000);
+
+          return !(
+            myAge < parseInt(document.getElementById("__underAge").value) ||
+            myAge > 100
+          );
+        },
+
+        resetForm() {
+          this.errors = [];
+          this.username = "";
+          this.password = "";
+          this.firstName = "";
+          this.lastName = "";
+          this.age = "";
+          this.mobile = "";
+          (this.province = this.provinces[0].id),
+            (this.city = this.cities[0].name);
+          this.country = "Ecuador";
+          this.birthDate = "1985-01-01";
+          this.confirmPass = "";
+          this.documentType = "";
+          this.documentNumber = "";
+          this.taxcode = "";
+          this.secretAnswer = [];
+          this.registrationCode = this.registrationCodePreLoad();
+        },
+
+        login() {
+          let formData = new FormData();
+          formData.append("username", this.documentNumber.trim());
+          formData.append("password", this.password);
+          this.$http.post("login", formData).then((response) => {
+            let result = response.data;
+            if (result.messageKo != null && result.messageKo != "") {
+              //error
+            } else {
+              location.href = "/thankyou?userId=" + this.userid;
+            }
+          });
+        },
+        recaptchaTest() {
+          let self = this;
+          let key = document.getElementById("__googleKey").value;
+          grecaptcha.ready(function () {
+            grecaptcha
+              .execute(key, {
+                action: "submit",
+              })
+              .then(function (token) {
+                self.googleApi(token);
+              })
+              .catch((response) => {
+                self.signUp();
+              });
+          });
+        },
+        googleApi(token) {
+          this.errors = [];
+          let formData = new FormData();
+          formData.append(
+            "secret",
+            document.getElementById("__googleSecret").value
+          );
+          formData.append("response", token);
+          this.$http
+            .post("verifyRecaptcha", formData)
+            .then((response) => {
+              if (response.data && response.data.success) this.signUp();
+              else this.errors.push("error captcha");
+            })
+            .catch((response) => {
+              this.signUp();
+            });
+        },
+        registrationCodePreLoad() {
+          if (document.getElementById("__affiliateRegisterToken") && document.getElementById("__affiliateRegisterToken").value)
+            return document.getElementById("__affiliateRegisterToken").value;
+          else if (document.getElementById("__pdsRegisterToken") && document.getElementById("__pdsRegisterToken").value)
+            return document.getElementById("__pdsRegisterToken").value;
+          else return "";
+        }
+      },
+    });
+  </script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- Plugins -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    var ssaUrl = "https://" + "clickserv.sitescout.com/conv/21240e37c7469202";
+    new Image().src = ssaUrl;
+    (function (d) {
+      var syncUrl = "https://" + "pixel.sitescout.com/dmp/asyncPixelSync";
+      var iframe = d.createElement("iframe");
+      (iframe.frameElement || iframe).style.cssText =
+        "width: 0; height: 0; border: 0; display: none;";
+      iframe.src = "javascript:false";
+      d.body.appendChild(iframe);
+      var doc = iframe.contentWindow.document;
+      doc
+        .open()
+        .write("<body onload=\"window.location.href='" + syncUrl + "'\">");
+      doc.close();
+    })(document);
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11372002712"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "AW-11372002712");
+  </script>
+  <!-- -->
+
+  <!-- Event snippet for Formulario Completado conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url != "undefined") {
+          window.location = url;
+        }
+      };
+      gtag("event", "conversion", {
+        send_to: "AW-11372002712/zYXfCOnozusYEJj7y64q",
+        event_callback: callback,
+      });
+      return false;
+    }
+  </script>
+  <!-- rimarc.io Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1260684751297923");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=1260684751297923&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</body>
+
+</html>

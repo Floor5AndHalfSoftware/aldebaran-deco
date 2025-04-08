@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Pronósticos deportivos | Juegos Online | bet593.ec</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="Pronósticos deportivos | Juegos Online | bet593.ec">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<!---Font Icon-->
+	<link href="font/flaticon.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Plugin CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<!-- / -->
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.png" />
+	<!-- / -->
+	<!-- Theme Style -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/aldebaran.css" rel="stylesheet">
+	<!-- / -->
+
+	<style>
+		input::-ms-reveal,
+		input::-ms-clear {
+			display: none;
+		}
+
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="dragbtn" class="close-launch">
+		<a th:href="${urllobby}">
+			<img src="images/close.webp" alt="close" />
+		</a>
+	</div>
+
+	<iframe id="iframeRef" th:src="*{link}" style="position: absolute;width: 100%;left: 0;height: 100%;"
+		framespacing="0" marginheight="0" marginwidth="0" border="0" frameborder="0" scrolling="yes" allowfullscreen
+		webkitallowfullscreen mozallowfullscreen></iframe>
+
+	<!-- JQuery -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<!-- Plugins -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		const myTimeout = setInterval(() => {
+			let href = document.getElementById("iframeRef").contentWindow.location.href;
+			if (href.includes('/#/games') || href.includes('/#/overview'))
+				location.href = href;
+		}, 1000);
+
+		window.addEventListener("orientationchange", function () {
+			document.getElementById("dragbtn").style.position = "absolute";
+			document.getElementById("dragbtn").style.top = '5px';
+			document.getElementById("dragbtn").style.right = '89px';
+			document.getElementById("dragbtn").style.left = null;
+		}, false);
+
+		$(document).ready(function () {
+			$('#dragbtn').draggable();
+		});
+
+	</script>
+</body>
+
+</html>

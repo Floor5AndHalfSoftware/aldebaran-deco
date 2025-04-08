@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Registro - Lotería Nacional de Ecuador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="colorlib.com" />
+
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+  <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css" />
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/login-style.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="wrapper" id="app" v-cloak>
+    <form id="wizard">
+      <!-- SECTION -->
+      <h2></h2>
+      <section>
+        <div class="inner">
+          <div class="logoc">
+            <img src="images/logo-modal-header.png" alt="" width="336" />
+          </div>
+          <div class="custom-form-content">
+            <div class="custom-form-header">
+              <h3>Registro Bet593</h3>
+            </div>
+            <img th:src="@{${'https://leadgenios.net/pixel.track?CID=466065&p=img&MerchantReferenceID=' + userId}}"
+              width="1" height="1" border="0" />
+            <div style="text-align: center;">
+              <img src="images/check.png" alt="check" style="width: 150px" />
+            </div>
+            <div style="text-align: center;">
+              <span style="font-family: Montserrat SemiBold; font-size: 33px; color: #453e79;">
+                <span>{{successMessage}}</span>
+              </span>
+              <br />
+              {{remember}}
+              <br /><br />
+              <a class="button-custom" href="/">Ir a mi cuenta</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </div>
+
+  <script src=" js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/mixins.js"></script>
+  <script src="js/locate.js"></script>
+
+  <script>
+    Vue.prototype.$http = axios.create({
+      timeout: 30000,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const vue = new Vue({
+      el: "#app",
+      mixins: [common],
+      data: {
+        contentsTwo: [],
+        recordTwo: null,
+        success: true,
+        successMessage: LANGUAGES['es-ES']['login-20'],
+        remember: LANGUAGES['es-ES']['check-mail-activation'],
+      },
+      methods: {
+        goHome() {
+          location.href = "/";
+        },
+        async getFileContent(id, bannerNumber) {
+          if (id) {
+            let formData = new FormData();
+            formData.append("id", id);
+            let response = await this.$http.post("cms/file/content", formData);
+            let result = response.data;
+            if (result.result == 0) {
+              this.recordTwo = result.record;
+            }
+          }
+        },
+        getBannerFile2() {
+          let formData = new FormData();
+          formData.append(
+            "language",
+            "es-ES"
+          );
+          formData.append("category", "banner signin step 2");
+          this.$http.post("cms/file/list", formData).then((response) => {
+            let result = response.data;
+            if (result.result == 0) {
+              this.contentsTwo = result.contents;
+              this.getFileContent(this.contentsTwo[0].id, 2);
+            }
+          });
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
